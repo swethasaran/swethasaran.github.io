@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Sai and Swe</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .envelope {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 40px; /* Center and margin-bottom */
+            position: relative;
+            text-align: center; /* Center text and button */
+            max-width: 800px; /* Set max-width */
+            margin: 0 auto 40px; /* Center and margin-bottom */
+
+        }
+
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 20px solid #fff;
+            transform: translateX(-50%);
+        }
+
+        .envelope h2 {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .envelope-button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .envelope-button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .welcome-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .gallery-item video {
+            outline: none;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay p {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="background-music" preload="auto">
+        <source src="audio/Kadal alai pola.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <h1>Welcome to Team Sai & Swe!</h1>
+        <div class="envelope">
+            <h2>MY LOVE,</h2>
+
+
+            <div class="welcome-message">
+                <p>Surprise! 🎉 I’m so excited to share this with you thangooo. This website is a little gift from me to
+                    you—a surprise that captures our journey together in a way that words alone could never fully
+                    express.</p>
+                <p> As you browse through our gallery, you'll see a collection of moments we've cherished together,
+                    captured in images and videos. Each piece tells a story of our journey, from our little adventures
+                    to the milestones we've celebrated.</p>
+                <b>Why this website?</b>
+                <p> Well, I wanted to create a space where we can relive our favorite memories and see how far we've
+                    come together. Every image tells a story, and every video holds a piece of our shared experiences. I
+                    hope this site brings a smile to your face and warmth to your heart, just as you do for me every
+                    day.</p>
+                <p>This site is more than just a gallery; it’s a testament to the incredible bond we share. It’s a place
+                    where our love and creativity come together, a visual diary of our journey as a couple. I hope you
+                    find joy in every corner of this site and that it serves as a beautiful reminder of the special
+                    moments we've created.</p>
+                <p>Thank you for being my rock, my partner, and my best friend. Your love and support mean the world to
+                    me, and I wanted to give you something as special as you are to me. Here’s to celebrating us, our
+                    memories, and the future we’ll build together.</p>
+                <p>Enjoy the tour, my love!</p>
+                <p>With all my heart,</p>
+                <p>Swetha</p>
+            </div>
+            <button class="envelope-button" id="play-button">Click Me</button>
+        </div>
+
+    
+            <div class="container">
+                <h1>Team Sai & Swe</h1>
+                <div class="gallery">
+                    <!-- Add images here -->
+                    <div class="gallery-item">
+                        <img src="images/fight_relief.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/fav_-pic.jpg" alt="Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/movie.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/kfc_01.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/swe_train_cute.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/animation.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/astonished.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/bus_stand.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/cafe_date.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/canada_day.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/cherry_blossom.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/college.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/cute_me.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/cute_us.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/b&w.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/domino.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/eeeee_image.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/facial.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/fav_-pic.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/first_meet 02.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/flight_journey.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gundu_1stday.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/his mark.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/home.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/heart_ballon_.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/home_depot.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/huugie.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/icecream.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/kfc_01.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/movie.jpg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/muthaahhh.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/muthah2.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/night_out.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/panda_he.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/room_01.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/sailesh_behind _me.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/sotta_me.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/laptop_shopping.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/tnagar.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/train.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/wow_image.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/xat result.jpeg" alt="Image 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/some_ppojai.jpeg" alt="Image 3">
+                    </div>
+                    <!-- Add more images as needed -->
+
+                    <!-- Add videos here -->
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/auto.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/brocolii.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/my vazhakai.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/darling.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/My_bf.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/my_girl.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/exam_boost_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/video_2024-08-21_23-10-41.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/perfect.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/sai_bday2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/agreement.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/babe.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/bike ride.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/canada_day_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/christmas.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/endlesslly.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/fallin_in _love.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/ielts.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/manifesting.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="images/perfect.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <!-- Add more videos as needed -->
+                </div>
+            </div>
+            <footer>
+                &copy; 2024 Team Sai and Swe. All rights reserved.
+            </footer>
+
+
+
+            <script>
+                // JavaScript to handle the audio playback
+                document.addEventListener('DOMContentLoaded', () => {
+                    const audio = document.getElementById('background-music');
+                    const button = document.getElementById('play-button');
+
+                    const playAudio = () => {
+                        audio.play().catch(error => {
+                            console.log('Autoplay prevented:', error);
+                            // Optionally, show a user prompt to start the audio
+                        });
+                    };
+
+                    if (button) {
+                        button.addEventListener('click', playAudio);
+                    }
+                });
+            </script>
+        </body>
+
+</html>
